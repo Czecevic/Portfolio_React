@@ -26,6 +26,52 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* ScrollBar */
+/* Largeur de la barre de défilement */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Fond de la barre de défilement */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Poignée de défilement */
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Coin supérieur gauche du coin inférieur droit, ne fonctionne que sur Safari */
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, #d1b202, #000);
+  background-size: 400% 400%;
+  animation: gardienBackground 5s ease infinite;
+}
+
+@keyframes gardienBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
