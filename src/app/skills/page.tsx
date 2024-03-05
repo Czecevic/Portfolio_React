@@ -1,21 +1,23 @@
+"use client";
+
+import { NavBar } from "../components/NavBar";
+import { ProgressBar } from "./components/ProgressBar";
+
 export default function Skills() {
-  const competence = [
-    SQL : {
-      name : 'SQL',
-      niveau : 50
-    },
-    NoSQL : {
-      name : 'NoSQL',
-      niveau : 50
-    },
-    "Figma",
-    "HTML",
-    "CSS",
-    "Python",
-    "Typescript / Javascript",
-    "React",
-    "Next",
-    "ExpressJS",
-  ];
-  return <h1>cocasse</h1>;
+  return (
+    <div className="text-center">
+      <NavBar />
+      <div className="px-48 flex flex-col gap-10">
+        <h1 className=" text-center text-5xl py-10 border-b-4 border-white border-w">
+          Mes competences
+        </h1>
+        <p>
+          Fort d&apos;une expérience dans la restauration et dans la musique,
+          j&apos;ai pu développer des savoir-être solides en communication
+          interpersonnelle et en gestion d&apos;équipe.
+        </p>
+        <ProgressBar />
+      </div>
+    </div>
+  );
 }

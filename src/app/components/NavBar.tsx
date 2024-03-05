@@ -4,7 +4,6 @@ import { FaBarsComponents } from "./FaBarsComponents";
 
 export const NavBar = () => {
   const pathname = usePathname();
-  console.log(typeof pathname);
   return (
     <nav
       className={`${

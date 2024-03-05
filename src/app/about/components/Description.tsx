@@ -1,12 +1,22 @@
+import imageDesc from "@/assets/charlesParcours.jpg";
+import Image from "next/image";
+
 export const Description = () => {
   return (
     <div className="flex flex-col gap-10 px-48 text-center">
       <h1 className=" text-center text-5xl py-10 border-b-4 border-white border-w">
         Mon parcours
       </h1>
+      <Image
+        src={imageDesc}
+        width={500}
+        height={500}
+        alt="imageCharles"
+        className="self-center opacity-70 rounded-md"
+      ></Image>
       <p>
         Hello ! Je m’appelle Charles Zecevic, développeur Web junior spécialisé
-        Front-end.
+        Front-end et musicien.
       </p>
       <p>
         Mon parcours de vie en tant que développeur débute avec mon entrée à
