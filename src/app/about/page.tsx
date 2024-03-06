@@ -3,6 +3,7 @@ import { LifeParcours } from "./components/LifeParcours";
 import "../globals.css";
 import { NavBar } from "../components/NavBar";
 import { Description } from "./components/Description";
+import { Footer } from "../components/Footer";
 
 export default function About() {
   return (
@@ -12,6 +13,7 @@ export default function About() {
         <Description />
         <LifeParcours />
       </div>
+      <Footer />
     </div>
   );
 }
