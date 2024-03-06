@@ -8,7 +8,7 @@ export default function Skills() {
   return (
     <div className="text-center bg-blue-gray-500 overflow-y-scroll">
       <NavBar />
-      <div className="px-48 flex flex-col gap-10">
+      <div className="flex flex-col gap-10 px-10 md:px-20 lg:px-40 xl:px-80">
         <h1 className=" text-center text-5xl py-10 border-b-4 border-white border-w">
           Mes competences
         </h1>

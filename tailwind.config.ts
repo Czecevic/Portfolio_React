@@ -1,6 +1,4 @@
-import { keyframes } from "@emotion/react";
-import type { Config } from "tailwindcss";
-const withMT = require("@material-tailwind/react/utils/withMT");
+import withMT from "@material-tailwind/react/utils/withMT";
 
 module.exports = withMT({
   content: [
@@ -16,6 +14,13 @@ module.exports = withMT({
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {},
+    },
+    screens: {
+      tablet: "640px",
+
+      laptop: "1024px",
+
+      desktop: "1280px",
     },
   },
   plugins: [],

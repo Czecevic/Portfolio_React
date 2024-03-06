@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import { Pie, PieChart, ResponsiveContainer, Cell } from "recharts";
+import { Pie, PieChart, ResponsiveContainer, Cell, Label } from "recharts";
 import { useState } from "react";
 import Image from "next/image";
 import mongoDB from "@/assets/imageLangage/leaf.png";
@@ -90,7 +90,7 @@ export const ProgressBar = () => {
   ];
   return (
     <div className="flex w-full flex-col items-center gap-10">
-      <div className="flex flex-wrap items-center justify-around gap-5 px-40">
+      <div className="flex flex-wrap items-center justify-around gap-5">
         {competences.map((competenceName, index) => {
           return (
             <div key={index} className="w-1/6">
@@ -105,27 +105,28 @@ export const ProgressBar = () => {
           );
         })}
       </div>
-      <div className="flex justify-between items-center w-full">
-        <div className=" w-1/4 h-full text-5xl">
-          {competences[selectLang].font}
-          <div className="items-center">
-            {/* <h1>{competences[selectLang].name}</h1> */}
-            <h1>{competences[selectLang].niveau}%</h1>
-          </div>
-        </div>
-        <ResponsiveContainer width="50%" aspect={1}>
+      <div className="flex items-center justify-center gap-20 w-full">
+        <div className="items-center w-1/5">{competences[selectLang].font}</div>
+        <ResponsiveContainer width="25%" aspect={1}>
           <PieChart>
             <Pie
               data={barCompetences}
               dataKey="niveau"
               cx="50%"
               cy="50%"
-              innerRadius={125}
-              outerRadius={150}
+              innerRadius={60}
+              outerRadius={80}
               startAngle={90}
               endAngle={450}
+              labelLine={false}
             >
-              <Cell fill="#d1b202" />
+              <Label
+                value={competences[selectLang].niveau}
+                position="center"
+                fontSize={20}
+                fill="#FFFFFF"
+              />
+              <Cell fill="#FFFFFF" />
               <Cell fill="transparent"></Cell>
             </Pie>
           </PieChart>
