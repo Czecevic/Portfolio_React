@@ -21,6 +21,9 @@
     "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.10",
     "@mui/styled-engine-sc": "^6.0.0-alpha.17",
+    "@react-three/drei": "^9.101.0",
+    "@react-three/fiber": "^8.15.19",
+    "@types/three": "^0.162.0",
     "locomotive-scroll": "^5.0.0-beta.11",
     "next": "14.1.0",
     "react": "^18",
@@ -28,7 +31,9 @@
     "react-dom": "^18",
     "react-text-transition": "^3.1.0",
     "recharts": "^2.12.2",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "three": "^0.162.0",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",

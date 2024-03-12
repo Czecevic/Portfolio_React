@@ -105,8 +105,12 @@ export const ProgressBar = () => {
           );
         })}
       </div>
+      <div className="w-full border-2"></div>
       <div className="flex items-center justify-center gap-20 w-full">
-        <div className="items-center w-1/5">{competences[selectLang].font}</div>
+        <div className="items-center w-1/5">
+          <h1 className=" text-xl mb-5">{competences[selectLang].name}</h1>
+          <div>{competences[selectLang].font}</div>
+        </div>
         <ResponsiveContainer width="25%" aspect={1}>
           <PieChart>
             <Pie
@@ -114,8 +118,8 @@ export const ProgressBar = () => {
               dataKey="niveau"
               cx="50%"
               cy="50%"
-              innerRadius={60}
-              outerRadius={80}
+              innerRadius={40}
+              outerRadius={60}
               startAngle={90}
               endAngle={450}
               labelLine={false}
