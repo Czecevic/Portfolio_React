@@ -25,6 +25,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+p {
+  font-size: x-large;
+}
+
 /* ScrollBar */
 /* Largeur de la barre de défilement */
 ::-webkit-scrollbar {

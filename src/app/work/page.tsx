@@ -1,13 +1,16 @@
 "use client";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { BoxComponents } from "../about/components/BoxComponents";
+import { Footer } from "../components/Footer";
 import { NavBar } from "../components/NavBar";
+import { Description } from "./pages/Description";
 
 export default function Work() {
   return (
-    <div className=" h-screen bg-black">
+    <div className=" h-screen background-animation overflow-y-scroll">
       <NavBar />
-      <BoxComponents />
+      <div>
+        <Description />
+      </div>
+      <Footer />
     </div>
   );
 }
