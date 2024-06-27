@@ -1,6 +1,6 @@
 "use client";
-import { LifeParcours } from "./components/LifeParcours";
 import "../globals.css";
+import { LifeParcours } from "./components/LifeParcours";
 import { NavBar } from "../components/NavBar";
 import { Description } from "./components/Description";
 import { Footer } from "../components/Footer";

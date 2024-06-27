@@ -1,6 +1,9 @@
 import img2048 from "../assets/2048img.png";
 import imgAllMusik from "../assets/AllMusicimg.png";
 import slotMachine from "../assets/slotMachine.png";
+import Kasa from "../assets/Kasa.png";
+import FishEye from "../assets/FishEye.png";
+import SportSee from "../assets/SportSee.png";
 import { Projet } from "../components/Projet";
 
 export const Description = () => {
@@ -19,6 +22,23 @@ export const Description = () => {
       name: "SlotMachine",
       imgSource: slotMachine,
       desc: "SlotMachine est une machine qui va choisir aléatoirement un chiffre / un mot / une condition",
+    },
+  ];
+  const SchoolProject = [
+    {
+      name: "Kasa",
+      imgSource: Kasa,
+      desc: "Kasa, leader de la location d'appartements entre particuliers en France, m'a recruté pour développer leur nouvelle plateforme web avec React et TypeScript. Le projet inclut la création de composants, la configuration des routes avec React Router, et le styling principalement en CSS. Utilisation de GitHub pour le versionning et Vercel pour le déploiement",
+    },
+    {
+      name: "SportSee",
+      imgSource: SportSee,
+      desc: "Dans le projet SportSee, nous développons un tableau de bord d'analytics de coaching sportif en utilisant React et React Router. Notre mission inclut l'intégration de graphiques avancés via des bibliothèques comme Recharts et la gestion des appels API avec Axios ou Fetch. La tâche principale consiste à créer la page profil utilisateur avec divers graphiques. Nous nous concentrons sur le front-end, bien que le back-end utilise Node.js. Une documentation complète est également requise. Le projet utilise TypeScript, React, et Axios, et le déploiement se fait via GitHub et Vercel.",
+    },
+    {
+      name: "FishEye",
+      imgSource: FishEye,
+      desc: "Dans le projet FishEye, nous travaillons avec une cheffe de projet et un designer UI pour un nouveau client, FishEye, un site web permettant aux photographes indépendants de présenter leurs meilleurs travaux. Suite à une levée de fonds, FishEye souhaite mettre à jour son site web. Le projet implique l'utilisation de JavaScript, CSS, et HTML.",
     },
   ];
   return (
@@ -43,8 +63,8 @@ export const Description = () => {
       <Projet allProjet={allProject} />
       {/* mettre mes projets perso => 2048 / AllMusik / SlotMachine */}
       <h3 className="text-3xl border-b-2 w-full text-center">Mes Exercices </h3>
-
-      {/* mettre mes projets scolaire => Kasa / SportSee / searchEngine / FishEye */}
+      <Projet allProjet={SchoolProject} />
+      {/* mettre mes projets scolaire => Kasa / SportSee / FishEye */}
       <h6 className="text-xl border-b-2 w-full text-center">
         exercice créer et proposer pour mes étudiants
       </h6>

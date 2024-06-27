@@ -1,5 +1,6 @@
 import imageDesc from "@/assets/charlesParcours.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Description = () => {
   return (
@@ -7,13 +8,24 @@ export const Description = () => {
       <h1 className=" text-center text-5xl py-10 border-b-4 border-white border-w">
         Mon parcours
       </h1>
-      <Image
-        src={imageDesc}
-        width={500}
-        height={500}
-        alt="imageCharles"
-        className="self-center opacity-70 rounded-md"
-      ></Image>
+      <motion.div
+        className=" self-center w-52 h-52"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
+        <Image
+          src={imageDesc}
+          alt="imageCharles"
+          layout="responsive"
+          className="rounded-md"
+          priority={true}
+        ></Image>
+      </motion.div>
       <p>
         Hello ! Je m’appelle Charles Zecevic, développeur Web junior spécialisé
         Front-end et musicien.

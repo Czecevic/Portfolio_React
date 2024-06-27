@@ -1,13 +1,21 @@
 "use client";
+import { useEffect, useRef } from "react";
 import { Footer } from "../components/Footer";
 import { NavBar } from "../components/NavBar";
 import { Description } from "./pages/Description";
 
 export default function Work() {
+  const descRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (descRef.current) {
+      descRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
   return (
-    <div className=" h-screen background-animation overflow-y-scroll">
+    <div className="h-screen background-animation overflow-y-scroll">
       <NavBar />
-      <div>
+      <div ref={descRef}>
         <Description />
       </div>
       <Footer />
