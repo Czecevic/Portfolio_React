@@ -48,9 +48,10 @@ export const Projet: React.FunctionComponent<ProjectProps> = ({
           <motion.img
             key={allProjet[imageIndex].imgSource.src}
             src={allProjet[imageIndex].imgSource.src}
+            alt={allProjet[imageIndex].name}
             initial="enter"
             animate="center"
-            className="rounded-lg"
+            className="rounded-lg w-full h-full"
             exit="exit"
             custom={direction}
             variants={variants}
@@ -109,7 +110,7 @@ export const Projet: React.FunctionComponent<ProjectProps> = ({
             <div className="flex flex-col items-center">
               <div className=" w-full relative lg:h-96 md:h-56 sm:h-16">
                 <Image
-                  src={allProjet[imageIndex].imgSource}
+                  src={allProjet[imageIndex].imgSource.src}
                   alt={allProjet[imageIndex].name}
                   layout="fill"
                   objectFit="cover"

@@ -4,6 +4,9 @@ import slotMachine from "../assets/slotMachine.png";
 import Kasa from "../assets/Kasa.png";
 import FishEye from "../assets/FishEye.png";
 import SportSee from "../assets/SportSee.png";
+import weatherForecast from "../assets/weatherForecast.png";
+import piggyBank from "../assets/piggyBank.png";
+import reactHook from "../assets/reactHook.png";
 import { Projet } from "../components/Projet";
 
 export const Description = () => {
@@ -41,6 +44,23 @@ export const Description = () => {
       desc: "Dans le projet FishEye, nous travaillons avec une cheffe de projet et un designer UI pour un nouveau client, FishEye, un site web permettant aux photographes indépendants de présenter leurs meilleurs travaux. Suite à une levée de fonds, FishEye souhaite mettre à jour son site web. Le projet implique l'utilisation de JavaScript, CSS, et HTML.",
     },
   ];
+  const StudiantProject = [
+    {
+      name: "weatherForecast",
+      imgSource: weatherForecast,
+      desc: "projet de meteo fait par les étudiants",
+    },
+    {
+      name: "piggyBank",
+      imgSource: piggyBank,
+      desc: "projet fait en react",
+    },
+    {
+      name: "reactHook",
+      imgSource: reactHook,
+      desc: "jsp",
+    },
+  ];
   return (
     <div className="flex flex-col items-center gap-10 mx-8">
       <h1 className="text-5xl border-b-2 w-full text-center">Mes projets</h1>
@@ -57,17 +77,18 @@ export const Description = () => {
         sensibilité artistique qui complète mon approche technique et
         pédagogique
       </p>
-      <h3 className="text-3xl border-b-2 w-full text-center">
+      <h3 className="text-4xl border-b-2 w-full text-center">
         Mes projets perso
       </h3>
       <Projet allProjet={allProject} />
       {/* mettre mes projets perso => 2048 / AllMusik / SlotMachine */}
-      <h3 className="text-3xl border-b-2 w-full text-center">Mes Exercices </h3>
+      <h3 className="text-4xl border-b-2 w-full text-center">Mes Exercices </h3>
       <Projet allProjet={SchoolProject} />
       {/* mettre mes projets scolaire => Kasa / SportSee / FishEye */}
-      <h6 className="text-xl border-b-2 w-full text-center">
+      <h3 className="text-4xl border-b-2 w-full text-center">
         exercice créer et proposer pour mes étudiants
-      </h6>
+      </h3>
+      <Projet allProjet={StudiantProject} />
       {/* mettre les exo => weatherForcast / ReactHooks / exercice NodeJS / test_Technique_FS */}
     </div>
   );
