@@ -91,27 +91,27 @@ export const ProgressBar = () => {
   return (
     <div className="flex w-full flex-col items-center gap-10">
       <div className="flex flex-wrap items-center justify-around gap-5">
-        {competences.map((competenceName, index) => {
-          return (
-            <div key={index} className="w-1/6">
-              <button
-                className="transition-all ease-in-out p-3 flex flex-col justify-between items-center w-full hover:scale-125"
-                onClick={() => setSelectLang(index)}
-              >
-                {competenceName.font}
-                {competenceName.name}
-              </button>
-            </div>
-          );
-        })}
+        {competences.map((competenceName, index) => (
+          <div key={index} className="w-1/6 sm:w-1/4 md:w-1/6 lg:w-1/12">
+            <button
+              className="transition-all ease-in-out p-3 flex flex-col justify-between items-center w-full hover:scale-125"
+              onClick={() => setSelectLang(index)}
+            >
+              {competenceName.font}
+              {competenceName.name}
+            </button>
+          </div>
+        ))}
       </div>
       <div className="w-full border-2"></div>
-      <div className="flex items-center justify-center gap-20 w-full">
-        <div className="items-center w-1/5">
-          <h1 className=" text-xl mb-5">{competences[selectLang].name}</h1>
-          <div>{competences[selectLang].font}</div>
+      <div className="flex items-center justify-center gap-10 md:gap-20 w-full flex-col md:flex-row">
+        <div className="flex flex-col items-center w-full md:w-1/5">
+          <h1 className="text-xl mb-5">{competences[selectLang].name}</h1>
+          <div className="w-16 h-16 md:w-24 md:h-24">
+            {competences[selectLang].font}
+          </div>
         </div>
-        <ResponsiveContainer width="25%" aspect={1}>
+        <ResponsiveContainer width="50%" height={200} className="md:w-1/4">
           <PieChart>
             <Pie
               data={barCompetences}

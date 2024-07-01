@@ -9,7 +9,7 @@ export const Description = () => {
         Mon parcours
       </h1>
       <motion.div
-        className=" self-center w-52 h-52"
+        className=" self-center md:w-96 md:h-96 w-52 h-52"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{

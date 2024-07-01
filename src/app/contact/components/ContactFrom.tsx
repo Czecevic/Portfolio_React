@@ -30,10 +30,10 @@ export const ContactForm = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Contact Us</h1>
       <form onSubmit={sendEmail} ref={form} className="space-y-4">
-        <div className="flex justify-between">
-          <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row md:space-x-4">
+          <div className="flex flex-col flex-1 mb-4 md:mb-0">
             <label htmlFor="user_name" className="block text-sm font-medium">
               Name
             </label>
@@ -44,7 +44,7 @@ export const ContactForm = () => {
               className="mt-1 block w-full p-2 border bg-transparent border-gray-300 rounded-md"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col flex-1">
             <label htmlFor="user_email" className="block text-sm font-medium">
               Email
             </label>
@@ -71,10 +71,10 @@ export const ContactForm = () => {
         <input
           type="submit"
           value="Send"
-          className=" bg-black w-full text-white p-2 rounded-md cursor-pointer"
+          className="bg-black w-full text-white p-2 rounded-md cursor-pointer"
         />
       </form>
-      {status && <p className="mt-4">{status}</p>}
+      {status && <p className="mt-4 text-center">{status}</p>}
     </div>
   );
 };

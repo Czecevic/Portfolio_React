@@ -84,14 +84,14 @@ export const Projet: React.FunctionComponent<ProjectProps> = ({
         </AnimatePresence>
       </button>
       <motion.div
-        className="absolute top-[calc(50%-20px)] text-black right-3 bg-white rounded-full w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-20"
+        className="absolute top-1/2 text-black right-3 bg-white rounded-full w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-20 transform -translate-y-1/2"
         onClick={() => paginate(1)}
         whileHover={{ scale: 1.2 }}
       >
         {">"}
       </motion.div>
       <motion.div
-        className="absolute top-[calc(50%-20px)] text-black left-3 bg-white rounded-full w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-20"
+        className="absolute top-1/2 text-black left-3 bg-white rounded-full w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-20 transform -translate-y-1/2"
         onClick={() => paginate(-1)}
         whileHover={{ scale: 1.2 }}
       >
@@ -99,8 +99,8 @@ export const Projet: React.FunctionComponent<ProjectProps> = ({
       </motion.div>
 
       {popUp && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-          <div className="relative bg-black p-10 rounded-lg w-2/3">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4">
+          <div className="relative bg-black p-10 rounded-lg w-full md:w-2/3">
             <button
               className="absolute top-2 right-2 p-2 text-white"
               onClick={() => setPopUp(false)}
@@ -108,7 +108,7 @@ export const Projet: React.FunctionComponent<ProjectProps> = ({
               x
             </button>
             <div className="flex flex-col items-center">
-              <div className=" w-full relative lg:h-96 md:h-56 sm:h-16">
+              <div className="w-full relative lg:h-96 md:h-56 sm:h-16 h-32">
                 <Image
                   src={allProjet[imageIndex].imgSource.src}
                   alt={allProjet[imageIndex].name}

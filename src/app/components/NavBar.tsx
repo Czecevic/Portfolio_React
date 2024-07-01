@@ -12,7 +12,10 @@ export const NavBar = () => {
     >
       <div className="max-width flex items-center justify-between">
         <div>
-          <Link href={"/"} className="text-white text-2xl font-semibold">
+          <Link
+            href={"/"}
+            className="text-white md:text-4xl text-lg font-semibold"
+          >
             Charles<span className="text-yellow-400"> Zecevic</span>
           </Link>
         </div>

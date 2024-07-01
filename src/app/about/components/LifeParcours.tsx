@@ -47,16 +47,23 @@ export const LifeParcours = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center items-stretch mb-10">
       {life.map((elemOfLife, index) => (
         <div
           key={index}
-          className="flex flex-col w-1/3 items-center py-5 px-10 m-10 border-4 transition duration-300 ease-in-out hover:scale-110"
+          className="flex flex-col w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 items-center py-5 px-5 m-5 border-4 transition duration-300 ease-in-out hover:scale-110"
         >
-          <FontAwesomeIcon icon={elemOfLife.icon} className="text-9xl p-3" />
-          <div className="w-1/2 text-center">
-            <h1>{elemOfLife.title}</h1>
-            <p>{elemOfLife.description}</p>
+          <FontAwesomeIcon
+            icon={elemOfLife.icon}
+            className="text-6xl md:text-8xl lg:text-9xl p-3"
+          />
+          <div className="w-full md:w-3/4 lg:w-2/3 text-center">
+            <h1 className="text-lg md:text-xl lg:text-2xl">
+              {elemOfLife.title}
+            </h1>
+            <p className="text-sm md:text-base lg:text-lg">
+              {elemOfLife.description}
+            </p>
           </div>
         </div>
       ))}
