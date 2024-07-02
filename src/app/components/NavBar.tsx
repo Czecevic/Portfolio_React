@@ -8,7 +8,7 @@ export const NavBar = () => {
     <nav
       className={`${
         pathname === "/" && "fixed"
-      } navbar bg-transparent w-full z-50 transition-all duration-300 flex justify-between p-10 items-start`}
+      } navbar bg-transparent w-full z-50 transition-all duration-300 flex justify-between p-10 items-start capitalize`}
     >
       <div className="max-width flex items-center justify-between">
         <div>
