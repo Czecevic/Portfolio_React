@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Footer } from "../components/Footer";
 import { NavBar } from "../components/NavBar";
-import { Description } from "./pages/Description";
+import { Description } from "./components/Description";
 
 export default function Work() {
   const descRef = useRef<HTMLDivElement>(null);
