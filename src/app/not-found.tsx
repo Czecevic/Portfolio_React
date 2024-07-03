@@ -3,14 +3,14 @@ import { ParticlesBackground } from "./components/ParticlesBg";
 
 export default function Custom404() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-black text-white">
-      <ParticlesBackground />
-      <div className="z-10 text-center">
+    <div className=" min-h-screen flex flex-col items-center justify-center bg-black text-white">
+      {/* <ParticlesBackground /> */}
+      <div className="text-center flex flex-col">
         <h1 className="text-6xl font-bold">404</h1>
-        <p className="text-2xl mt-4">Oops! Page not found.</p>
+        <p className="text-2xl mt-4">Oops! pas trouvé :(</p>
         <Link
           href="/"
-          className="mt-6 text-lg text-white bg-blue-500 rounded-lg p-5 transition duration-300 ease-in-out hover:bg-blue-600"
+          className="mt-6 text-lg text-black bg-yellow-500 rounded-lg p-5 transition duration-300 ease-in-out hover:bg-yellow-100"
         >
           Retourner à l'accueil
         </Link>
