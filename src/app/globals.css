@@ -63,6 +63,10 @@ p {
   animation: gardienBackground 5s ease infinite;
 }
 
+.imageAnimation {
+  text-align: -webkit-center;
+}
+
 @keyframes gardienBackground {
   0% {
     background-position: 0% 50%;
