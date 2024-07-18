@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { ParticlesBackground } from "./components/ParticlesBg";
 
 export default function Custom404() {
   return (
     <div className=" min-h-screen flex flex-col items-center justify-center bg-black text-white">
-      {/* <ParticlesBackground /> */}
       <div className="text-center flex flex-col">
         <h1 className="text-6xl font-bold">404</h1>
         <p className="text-2xl mt-4">Oops! pas trouvé :&#91;</p>
