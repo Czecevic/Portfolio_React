@@ -15,7 +15,7 @@ export default function Home() {
       <Image
         src={myFace}
         alt="myFace"
-        className="h-screen object-cover"
+        className="h-screen object-cover w-full"
       ></Image>
       <WordJob></WordJob>
     </main>
