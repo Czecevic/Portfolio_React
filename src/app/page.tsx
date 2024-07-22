@@ -10,6 +10,7 @@ export default function Home() {
     <main>
       <Head>
         <link rel="icon" href="./favicon.ico" />
+        <meta name="portfolio" content="my production" />
       </Head>
       <NavBar />
       <Image

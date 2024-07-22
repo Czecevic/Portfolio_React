@@ -46,7 +46,10 @@ export const FaBarsComponents = () => {
         </li>
       </ul>
       <div className="menu-btn lg:hidden text-white text-2xl cursor-pointer">
-        <button onClick={() => setIsOpenFaBars(!isOpenFaBars)}>
+        <button
+          onClick={() => setIsOpenFaBars(!isOpenFaBars)}
+          aria-label="NavBar"
+        >
           {isOpenFaBars ? (
             <FontAwesomeIcon icon={faCircleXmark} />
           ) : (

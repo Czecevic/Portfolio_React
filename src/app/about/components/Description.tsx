@@ -21,7 +21,6 @@ export const Description = () => {
         <Image
           src={imageDesc}
           alt="imageCharles"
-          layout="responsive"
           className="rounded-md"
           priority={true}
         ></Image>
