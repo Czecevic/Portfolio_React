@@ -1,30 +1,34 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+"use client";
+import React, { useRef, useState, FormEvent } from "react";
 
-export const ContactForm = () => {
+export const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
-  const [status, setStatus] = useState("");
-  const sendEmail = (e: React.FormEvent) => {
-    e.preventDefault();
+  const [status, setStatus] = useState<string>("");
 
-    if (form.current) {
-      emailjs
-        .sendForm(
-          "service_kbi87hb",
-          "template_ggw1zwn",
-          form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            setStatus("Message sent successfully!");
-          },
-          (error) => {
-            console.log(error.text);
-            setStatus("Failed to send message. Please try again.");
-          }
-        );
+  const sendEmail = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      if (!form.current) return;
+
+      const formData = new FormData(form.current);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch("../../api/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("Email sent successfully!");
+        form.current.reset();
+      } else {
+        setStatus("Failed to send email.");
+      }
+    } catch (error) {
+      setStatus("An error occurred.");
     }
   };
 
