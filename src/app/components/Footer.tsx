@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gray-800 h-48 flex flex-col justify-center items-center gap-10 w-full">
       <div className="flex justify-center items-center gap-5">
-        <Link href="mailto:charleszecevic@gmail.com">
+        <Link href={"/contact"}>
           <FontAwesomeIcon
             icon={faEnvelope}
             className="transition-all text-xl text-white rounded-full border-2 p-3 hover:scale-125"

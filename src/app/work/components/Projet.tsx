@@ -14,7 +14,12 @@ export const Projet: React.FunctionComponent<ProjectProps> = ({
 
   return (
     <div className="relative w-full max-w-7xl mx-auto aspect-auto text-center imageAnimation">
-      <Carousel className="rounded-xl" placeholder="projet">
+      <Carousel
+        className="rounded-xl"
+        placeholder="projet"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         {allProjet.map((projet, index) => (
           <div key={index} className="relative h-96 w-5/6">
             <button
